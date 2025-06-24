@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Web Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>My Website</h2>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <section class="registration-form">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="regFirstName">First Name:</label>
+                <input type="text" id="regFirstName" name="regFirstName" required>
+
+                <label for="regLastName">Last Name:</label>
+                <input type="text" id="regLastName" name="regLastName" required>
+
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="regEmail" required>
+
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="regPassword" required>
+
+                <label for="regConfirmPassword">Confirm Password:</label>
+                <input type="password" id="regConfirmPassword" name="regConfirmPassword" required>
+
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <div id="regFormErrors"></div>
+    </section>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </div>
+        </form>
+        <div id="formErrors"></div>
+    </section>
+
+    <section class="todo-gallery">
+        <h2>To-Do List</h2>
+        <div class="form-group">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
